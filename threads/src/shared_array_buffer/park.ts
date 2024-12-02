@@ -275,8 +275,8 @@ export class WASIFarmParkUseArrayBuffer extends WASIFarmPark {
 
             // console.log("listen_base fds_map", this.fds_map);
 
-            // sleep 1000ms
-            await new Promise((resolve) => setTimeout(resolve, 1000));
+            // sleep 10ms
+            await new Promise((resolve) => setTimeout(resolve, 10));
 
             break;
           }
@@ -987,8 +987,8 @@ export class WASIFarmParkUseArrayBuffer extends WASIFarmPark {
       } catch (e) {
         console.error(e);
 
-        // sleep 1000ms
-        await new Promise((resolve) => setTimeout(resolve, 1000));
+        // sleep 10ms
+        await new Promise((resolve) => setTimeout(resolve, 10));
 
         const lock_view = new Int32Array(this.lock_fds);
         Atomics.exchange(lock_view, 1, 0);
